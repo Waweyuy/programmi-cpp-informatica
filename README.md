@@ -1,1 +1,0 @@
-# programmi-cplus-informatica
