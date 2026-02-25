@@ -4,6 +4,7 @@ using namespace std;
 
 int main(){
     int M[3][2], pari=0;
+    srand(time(0));
     
     //assegnazione
     for(int i=0; i<3; i++){
@@ -55,3 +56,4 @@ int main(){
         return 0;
     
 }
+
