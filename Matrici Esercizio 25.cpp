@@ -28,29 +28,30 @@ int main(){
     //c'è un numero pari?
     if(pari>0)
         cout << "true" << endl;
-    
-    //riga a -> vettore vert; colonna b -> vettore orizon
-    int a=0, b=0, vert[3], orizon[2];
-    
-    for(int i=0; i<3; i++){
-        vert[i]=M[i][a];
-    }
-    
-    cout << "vert =   {";
-    for(int i=0; i<3; i++)
-        cout << vert[i] << ", ";
-    cout << "\b\b} " << endl;
-    
+   
+    int vert[3] = {0};
+    int orizon[2] = {0};
 
-    for(int i=0; i<2; i++){
-        orizon[i]=M[b][i];
-    }
-    
+    //somme
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 2; j++){
+        vert[i] += M[i][j];     //somma riga i
+        orizon[j] += M[i][j];   //somma colonna j
+     }
+}
+
+    //stampa vert
+    cout << "vert =   {";
+    for(int i = 0; i < 3; i++)
+        cout << vert[i] << ", ";
+    cout << "\b\b}" << endl;
+
+    //stampa orizon
     cout << "orizon = {";
-    for(int i=0; i<2; i++)
+    for(int i = 0; i < 2; i++)
         cout << orizon[i] << ", ";
-    cout << "\b\b} " << endl;
+    cout << "\b\b}" << endl;
+
+        return 0;
     
-    
-    return 0;
 }
